@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package resumeadvisor;
+
+option go_package = "proto;resumeadvisor";
+
+
+service ResumeService {
+  rpc GetFeedback(ResumeRequest) returns (ResumeFeedback);
+  rpc GetDetailedFeedback(ResumeRequest) returns (stream ResumeFeedback);
+}
+
+message ResumeRequest {
+  string username = 1;
+  string resumetext = 2;
+}
+
+message ResumeFeedback {
+  repeated string suggestions = 1;
+}
