@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package resumeadvisor;
 
-option go_package = "proto;resumeadvisor";
+option go_package = "github.com/Sharooq-Ebrahim/ResumeAdvisor-gRPC/proto;resumeadvisor";
 
 
 service ResumeService {
